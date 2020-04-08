@@ -10,6 +10,14 @@ class TestCustomer < Minitest::Test
        @customer = Customer.new("Mike", 20) 
     end
 
+    def test_customer_can_have_name
+        assert_equal("Mike", @customer.name)
+    end
+
+    def test_customer_can_have_money
+        assert_equal(20, @customer.wallet)
+    end
+
 
 
     
