@@ -17,5 +17,9 @@ class TestPub < Minitest::Test
     def test_pub_can_have_name
         assert_equal("Winchester", @pub.name)
     end
+
+    def test_pub_can_have_till
+        assert_equal(500, @pub.till)
+    end
     
 end
