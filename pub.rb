@@ -8,6 +8,7 @@ class Pub
         @drinks = drinks
     end
 
+    #cash from customer received into till
     def cash_into_till(drink)
         @till += drink.price
     end
