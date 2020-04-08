@@ -5,6 +5,7 @@ class Customer
     def initialize(name, wallet)
         @name = name
         @wallet = wallet
+        @drinks_bought = []
     end
 
 
