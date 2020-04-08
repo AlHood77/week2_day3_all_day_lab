@@ -6,11 +6,12 @@ require_relative('../drink.rb')
 
 class TestDrink < Minitest::Test
 
-    
+    def setup
+       @drink = Drink.new("Wine", 4) 
+    end
     
     def test_drink_can_have_name
-        drink = Drink.new("Wine", 4)
-        assert_equal("Wine", drink.name)
+        assert_equal("Wine", @drink.name)
     end
 
 
