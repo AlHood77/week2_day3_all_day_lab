@@ -13,6 +13,11 @@ class Pub
         @till += drink.price
     end
 
+    #pub checking age of customer
+    def check_age(age)
+       age = @customer.age 
+    end
+    
     
     
 end
