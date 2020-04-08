@@ -34,11 +34,7 @@ class TestCustomer < Minitest::Test
         assert_equal(16, @customer.wallet)
     end
 
-    #Tallying number of drinks bought by customer (by name of drink)
-    def test_number_of_drinks_bought
-        @customer.drinks_bought(@drink)
-        assert_equal(2, @drinks_bought.count)
-    end
+
 
 
     

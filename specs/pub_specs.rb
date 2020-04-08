@@ -13,6 +13,7 @@ class TestPub < Minitest::Test
         @drink2 = Drink.new("Wine", 4)
         @drink3 = Drink.new("Vodka", 2)
         @customer = Customer.new("Mike", 20, 33) 
+        @customer2 = Customer.new("Paul", 10, 17)
         @pub = Pub.new("Winchester", 500, [@drink1, @drink2, @drink3])
     end
 
@@ -34,10 +35,21 @@ class TestPub < Minitest::Test
         assert_equal(504, @pub.till)
     end
 
+    #Tallying number of drinks sold to customer (by name of drink)
+    def test_number_of_drinks_sold
+        @pub.sell_drink(@drink1, @customer)
+        assert_equal(1, @pub.drinks_sold)
+    end
+
     #pub checking age of customer
     def test_pub_checks_customer_age
         # @customer.check_age(@customer.age)
         assert_equal(33, @customer.age)
+    end
+
+    #pub serves drink if age >= 18
+    def test_pub_checks_age_before_serving__over_18
+        assert_equal(true, (@customer.age >= 18))
     end
 
 end

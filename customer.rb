@@ -1,6 +1,6 @@
 class Customer
 
-    attr_reader :name, :wallet, :age
+    attr_reader :name, :wallet, :age, :drinks_bought
 
     def initialize(name, wallet, age)
         @name = name
@@ -14,13 +14,7 @@ class Customer
         @wallet -= drink.price
     end
 
-    #Tallying number of drinks bought by customer (by name of drink)
-    def drinks_bought(drink)
-        @drinks_bought << drink.name
 
-        p @drinks_bought
-
-    end
 
 
 
