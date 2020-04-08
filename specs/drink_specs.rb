@@ -6,7 +6,7 @@ require_relative('../drink.rb')
 
 class TestDrink < Minitest::Test
     
-    
+
 
 
     
