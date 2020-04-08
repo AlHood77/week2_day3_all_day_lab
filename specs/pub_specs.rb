@@ -26,4 +26,10 @@ class TestPub < Minitest::Test
     def test_pub_can_have_drinks
         assert_equal(3, @pub.drinks.count())
     end
+
+    def test_pub_receives_money_from_customer
+        @pub.cash_into_till(@drink2)
+        assert_equal(504, @pub.till)
+    end
+
 end
