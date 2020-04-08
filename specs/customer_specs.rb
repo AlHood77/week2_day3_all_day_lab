@@ -11,6 +11,8 @@ class TestCustomer < Minitest::Test
     def setup
        @customer = Customer.new("Mike", 20) 
        @drink = Drink.new("Wine", 4)
+       @drink2 = Drink.new("Gin", 3)
+       @drinks_bought = [@drink, @drink2]
     end
 
     def test_customer_can_have_name
@@ -24,6 +26,11 @@ class TestCustomer < Minitest::Test
     def test_customer_can_pay_for_drink
         @customer.pay_for_drink(@drink)
         assert_equal(16, @customer.wallet)
+    end
+
+    def test_number_of_drinks_bought
+        @customer.drinks_bought(@drink)
+        assert_equal(2, @drinks_bought.count)
     end
 
 
